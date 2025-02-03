@@ -87,11 +87,23 @@
         .scientific:hover {
             background: #2980b9;
         }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            border: 0;
+        }
     </style>
 </head>
 <body>
     <div class="calculator">
-        <input type="text" id="display" readonly>
+        <label for="display" class="sr-only">Calculator Display</label>
+        <input type="text" id="display" aria-label="Calculator Display" readonly>
         <div class="buttons">
             <!-- Scientific Functions -->
             <button class="scientific" onclick="calculate('sin')">sin</button>
